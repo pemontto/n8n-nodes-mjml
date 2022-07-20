@@ -1,4 +1,3 @@
-/* eslint-disable n8n-nodes-base/filesystem-wrong-node-filename */
 import mjml2html from 'mjml';
 
 import {
@@ -96,7 +95,7 @@ export class Mjml implements INodeType {
 				newItem.binary = {};
 				Object.assign(newItem.binary, item.binary);
 			}
-		
+
 			try {
 				set(newItem.json, propertyName, mjml2html(mjml, mjmlOptions).html);
 			} catch (error) {
