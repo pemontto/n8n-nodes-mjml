@@ -45,7 +45,7 @@ export class Mjml implements INodeType {
 					alwaysOpenEditWindow: true,
 				},
 				default: '',
-				description: 'MJML markup to conver to HTML',
+				description: 'MJML markup to convert to HTML',
 			},
 			// {
 			// 	displayName: 'Beautify',
