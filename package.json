@@ -1,13 +1,14 @@
 {
   "name": "n8n-nodes-mjml",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Node to convert MJML to HTML",
   "keywords": [
     "n8n-community-node-package",
     "email",
     "templating",
     "html",
-    "mjml"
+    "mjml",
+    "n8n"
   ],
   "license": "MIT",
   "homepage": "https://github.com/pemontto/n8n-nodes-mjml",
@@ -46,8 +47,8 @@
     "@typescript-eslint/parser": "^5.29.0",
     "eslint-plugin-n8n-nodes-base": "^1.5.4",
     "gulp": "^4.0.2",
-    "n8n-core": "^0.125.0",
-    "n8n-workflow": "^0.107.0",
+    "n8n-core": "^0.130.0",
+    "n8n-workflow": "^0.112.0",
     "prettier": "^2.7.1",
     "tslint": "^6.1.2",
     "typescript": "~4.6.0"
