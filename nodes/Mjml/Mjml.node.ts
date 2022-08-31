@@ -24,7 +24,6 @@ export class Mjml implements INodeType {
 		description: 'Convert MJML to HTML',
 		defaults: {
 			name: 'MJML to HTML',
-			color: '#f45e43',
 		},
 		inputs: ['main'],
 		outputs: ['main'],
