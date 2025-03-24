@@ -2,12 +2,10 @@ import mjml2html from 'mjml';
 
 import {
 	IExecuteFunctions,
-} from 'n8n-core';
-
-import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
+	NodeConnectionType,
 	NodeOperationError,
 } from 'n8n-workflow';
 
@@ -25,8 +23,8 @@ export class Mjml implements INodeType {
 		defaults: {
 			name: 'MJML to HTML',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: [NodeConnectionType.Main],
+		outputs: [NodeConnectionType.Main],
 		credentials: [],
 		properties: [
 			{
@@ -34,7 +32,8 @@ export class Mjml implements INodeType {
 				name: 'name',
 				type: 'string',
 				default: 'html',
-				description: 'Name of the property to write HTML to. Supports dot-notation. Example: "data.person[0].name"',
+				description:
+					'Name of the property to write HTML to. Supports dot-notation. Example: "data.person[0].name"',
 			},
 			{
 				displayName: 'MJML',
@@ -71,15 +70,15 @@ export class Mjml implements INodeType {
 
 		for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
 			const propertyName = this.getNodeParameter('name', itemIndex, '') as string;
-			const mjml =  this.getNodeParameter('mjml', itemIndex, '') as string;
+			const mjml = this.getNodeParameter('mjml', itemIndex, '') as string;
 			// const beautify = this.getNodeParameter('beautify', itemIndex, false) as boolean;
 			// const minify = this.getNodeParameter('minify', itemIndex, false) as boolean;
 
 			item = items[itemIndex];
 
 			const mjmlOptions = {
-			// 	beautify,
-			// 	minify,
+				// 	beautify,
+				// 	minify,
 			};
 
 			const newItem: INodeExecutionData = {
@@ -101,7 +100,7 @@ export class Mjml implements INodeType {
 				// This node should never fail but we want to showcase how
 				// to handle errors.
 				if (this.continueOnFail()) {
-					returnData.push({json: this.getInputData(itemIndex)[0].json, error});
+					returnData.push({ json: this.getInputData(itemIndex)[0].json, error });
 					continue;
 				} else {
 					// Adding `itemIndex` allows other workflows to handle this error
