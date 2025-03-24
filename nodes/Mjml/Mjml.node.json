@@ -2,11 +2,7 @@
 	"node": "n8n-nodes-mjml.mjml",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
-	"categories": [
-		"Communication",
-		"Marketing & Content",
-		"Utility"
-	],
+	"categories": ["Communication", "Marketing & Content", "Utility"],
 	"resources": {
 		"credentialDocumentation": [],
 		"primaryDocumentation": [
