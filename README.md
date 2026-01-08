@@ -1,6 +1,6 @@
 # n8n-nodes-mjml
 
-[![](https://raw.githubusercontent.com/pemontto/n8n-nodes-mjml/main/nodes/Mjml/mjml-text.svg)](https://mjml.io/)
+<img src="https://raw.githubusercontent.com/pemontto/n8n-nodes-mjml/main/icons/mjml.svg" width="120" alt="MJML Logo" />
 
 n8n node to convert [MJML](https://mjml.io/) to HTML.
 
