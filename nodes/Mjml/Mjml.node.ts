@@ -1,12 +1,12 @@
 import mjml2html from 'mjml';
 
 import {
-	IExecuteFunctions,
-	INodeExecutionData,
-	INodeType,
-	INodeTypeDescription,
-	NodeConnectionType,
+	NodeConnectionTypes,
 	NodeOperationError,
+	type IExecuteFunctions,
+	type INodeExecutionData,
+	type INodeType,
+	type INodeTypeDescription,
 } from 'n8n-workflow';
 
 import { set } from 'lodash';
@@ -15,16 +15,17 @@ export class Mjml implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'MJML',
 		name: 'mjml',
-		icon: 'file:mjml-icon.svg',
+		icon: 'file:../../icons/mjml.svg',
 		group: ['transform'],
 		version: 1,
+		usableAsTool: true,
 		subtitle: '={{$parameter["name"]}}',
 		description: 'Convert MJML to HTML',
 		defaults: {
 			name: 'MJML to HTML',
 		},
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs: [NodeConnectionTypes.Main],
+		outputs: [NodeConnectionTypes.Main],
 		credentials: [],
 		properties: [
 			{
