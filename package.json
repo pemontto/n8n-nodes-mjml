@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-mjml",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Node to convert MJML to HTML",
   "keywords": [
     "n8n-community-node-package",
