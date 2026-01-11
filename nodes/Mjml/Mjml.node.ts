@@ -1,4 +1,5 @@
 import mjml2html from 'mjml';
+import set from 'lodash.set';
 
 import {
 	NodeConnectionTypes,
@@ -8,8 +9,6 @@ import {
 	type INodeType,
 	type INodeTypeDescription,
 } from 'n8n-workflow';
-
-import { set } from 'lodash';
 
 export class Mjml implements INodeType {
 	description: INodeTypeDescription = {

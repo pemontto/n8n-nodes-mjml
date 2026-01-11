@@ -12,5 +12,5 @@ updates:
     allow:
       # Allow updates for Mjml
       - dependency-name: "mjml"
-      # Allow updates for Lodash
-      - dependency-name: "lodash"
+      # Allow updates for lodash.set
+      - dependency-name: "lodash.set"
